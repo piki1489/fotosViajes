@@ -4,252 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure CSS Gallery</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Galería Fotográfica de Mis Viajes</title>
+    <link rel="stylesheet" href="./style/style.css">
 
-        body {
-            background: #212121;
-            color: #ededed;
-            font-family: 'Handlee', cursive;
-            font-size: clamp(.75em, 1vw + 1vh, 1.25em);
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
-        }
-
-        header,
-        footer {
-            text-align: center;
-            padding: 1em;
-        }
-
-        h1 {
-            font-family: 'Gochi Hand', cursive;
-            font-size: 3em;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-            gap: 1em;
-            padding: 1em;
-        }
-
-        figure {
-            display: grid;
-            grid-template-rows: auto 1fr;
-            aspect-ratio: 3 / 2;
-            position: relative;
-            opacity: 0;
-            transform: translateY(100px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            cursor: pointer;
-        }
-
-        figure.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            transition: transform 0.3s ease;
-        }
-
-        figure:hover img {
-            transform: scale(1.05);
-        }
-
-        figcaption {
-            position: absolute;
-            bottom: 0;
-            background-color: rgba(33, 33, 33, 0.7);
-            padding: 0.5em;
-            color: gold;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        figure:hover figcaption {
-            opacity: 1;
-        }
-
-        a {
-            color: gold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer p {
-            margin: 1em 0;
-        }
-
-        /* Zoom overlay */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            z-index: 10;
-        }
-
-        .overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border: 5px solid #fff;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-        }
-
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Close button */
-        .overlay .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <h1>Pure CSS simple gallery with on scroll effects - reveal, parallax. Responsive, accessible.</h1>
+        <h1>Descubre el Mundo a Través de Mi Lente</h1>
+        <p>Bienvenidos a una colección de momentos capturados durante mis viajes por todo el mundo. Desde bulliciosas ciudades hasta paisajes serenos, cada foto cuenta una historia de aventura, descubrimiento y asombro. Desplázate hacia abajo y deja que la magia de viajar se despliegue ante tus ojos.</p>
+        
     </header>
     <main>
         <figure>
-            <img src="./img/montanya.jpg" alt="White old style wooden buildings in Norway">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/white-concrete-house-near-mountain-at-daytime-c--vvU4E16w" target="_blank">Jelle van Leest</a></figcaption>
+            <img src="./img/1725361043511.jpg" alt="White old style wooden buildings in Norway">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="./img//lago.jpg" alt="Cobblestone street in Râșnov, Romania">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/gray-concrete-building-AuvVbaWhgXk" target="_blank">Nomadic Julien</a></figcaption>
+            <img src="./img/1725363723364.jpg" alt="Cobblestone street in Râșnov, Romania">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="./img/camino.jpg" alt="Stores in Stockholm, Sweden">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-at-the-street-between-commercial-buildings-QYI__0vehUs" target="_blank">Linus Mimietz</a></figcaption>
+            <img src="./img/1725363870395.jpg" alt="Stores in Stockholm, Sweden">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1616842843671-d495fcca6a85?w=800" alt="Snow-covered street in Leiden, Netherlands">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-snow-covered-road-during-daytime-6hL26b0vCH8" target="_blank">Ruben Hanssen</a></figcaption>
+            <img src="./img/enhanced__DSC0826.JPG" alt="Snow-covered street in Leiden, Netherlands">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1594088486803-cba1abbcfe84?w=800" alt="Street with shops in Perth, Australia">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-street-during-daytime-qa2udWXd9OY" target="_blank">Bella Foster</a></figcaption>
+            <img src="./img/enhanced__DSC0849.JPG" alt="Street with shops in Perth, Australia">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1571912033951-8d4009cd20c9?w=800" alt="Old town in Rothenburg ob der Tauber, Germany">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/brown-concrete-building-during-daytime-P6uga8AP5io" target="_blank">Hendrik Kespohl</a></figcaption>
+            <img src="./img/1725361043511.jpg" alt="Old town in Rothenburg ob der Tauber, Germany">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1568882393281-0d690ca62d64?w=800" alt="Jewelry shop in Copenhagen, Denmark">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/green-leafed-trees-dOpg4PBwqAE" target="_blank">Mihai Moisa</a></figcaption>
+            <img src="./img/1725363723364.jpg" alt="Jewelry shop in Copenhagen, Denmark">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1549643276-fdf2fab574f5?w=800" alt="Narrow street in Málaga, Spain">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/empty-seats-and-tables-in-between-buildings-during-daytime-p0R8R5IS6aA" target="_blank">Jonas Hoss</a></figcaption>
+            <img src="./img/1725363870395.jpg" alt="Narrow street in Málaga, Spain">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1573167443175-867d91708f97?w=800" alt="Busy street in Vienna, Austria">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-beside-berlitz-building-during-daytime-x5icsOgc7Lw" target="_blank">Leyre</a></figcaption>
+            <img src="./img/enhanced__DSC0826.JPG" alt="Busy street in Vienna, Austria">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1608197463396-7152ce7fcb70?w=800" alt="Astronomical Tower in Prague, Czechia">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/a-group-of-people-walking-down-a-street-next-to-tall-buildings-8X0Hexuz9jc" target="_blank">adrianna geo</a></figcaption>
+            <img src="./img/enhanced__DSC0849.JPG" alt="Astronomical Tower in Prague, Czechia">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1560242374-ca6dd3434522?w=800" alt="Narrow street in Catargena, Colombia">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/alley-photography-of-road-during-daytime-JINIW3yzobc" target="_blank">Reiseuhu</a></figcaption>
+            <img src="./img/1725361043511.jpg" alt="Narrow street in Catargena, Colombia">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1617577862629-d80cc2297a46?w=800" alt="Stairs in Marseille, France">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/green-plants-on-brown-concrete-stairs-Qn_ot1LHFng" target="_blank">Andrei Koscina</a></figcaption>
+            <img src="./img/1725363723364.jpg" alt="Stairs in Marseille, France">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1612361808300-da9583e1b34e?w=800" alt="Street in Novara di Sicilia, Italy">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-street-between-buildings-during-daytime-2jZs2_Dsghg" target="_blank">Federico Di Dio</a></figcaption>
+            <img src="./img/1725363870395.jpg" alt="Street in Novara di Sicilia, Italy">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1591108216943-5e094eb7ea98?w=800" alt="Street in Chania, Greece">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-street-during-daytime-2BliuRnjcQA" target="_blank">Andreas Pajuvirta</a></figcaption>
+            <img src="./img/enhanced__DSC0826.JPG" alt="Street in Chania, Greece">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1583495833696-852f6573e8ae?w=800" alt="Clock Tower in Bern, Switzerland">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/brown-and-white-concrete-building-WsQI91qMWyg" target="_blank">Claudio Schwarz</a></figcaption>
+            <img src="./img/enhanced__DSC0849.JPG" alt="Clock Tower in Bern, Switzerland">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1609278406593-363130c99995?w=800" alt="Street with flowers in Montreal, Canada">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/red-flowers-on-gray-concrete-pathway-2SqtQMauIg0" target="_blank">Beverly Castro</a></figcaption>
+            <img src="./img/1725361043511.jpg" alt="Narrow street in Catargena, Colombia">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1573157268772-519f309dc212?w=800" alt="Busy street in Warsaw, Poland">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-crossing-on-street-between-concrete-structures-XEAoXLVsCRE" target="_blank">Victor Malyushev</a></figcaption>
+            <img src="./img/1725363723364.jpg" alt="Stairs in Marseille, France">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1513543806865-85e29a7c0352?w=800" alt="Stairs in Valetta, Malta">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-stairs-between-buildings-in-distant-of-mountain-lgo364o6HAc" target="_blank">Reuben Farrugia</a></figcaption>
+            <img src="./img/1725363870395.jpg" alt="Street in Novara di Sicilia, Italy">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1567994484512-55f8fe3c1a05?w=800" alt="Cobblestone street in Bruges, Belgium">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/a-cobblestone-street-lined-with-brick-buildings-Yra5bMGqn20" target="_blank">Thierry Lemaitre</a></figcaption>
+            <img src="./img/enhanced__DSC0826.JPG" alt="Street in Chania, Greece">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
         <figure>
-            <img src="https://images.unsplash.com/photo-1598259218735-3d05c504e64f?w=800" alt="Stairs in Dubrovnik, Croatia">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/green-plant-on-black-plastic-pot-uZdZwVxfuRs" target="_blank">Miha Rekar</a></figcaption>
-        </figure>
-        <figure>
-            <img src="https://images.unsplash.com/photo-1652023264571-9c606573a1df?w=800" alt="Street in Talinn, Estonia">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/a-street-with-buildings-on-both-sides-NK9rU0wX-Lc" target="_blank">Mahsha Ziapour</a></figcaption>
-        </figure>
-        <figure>
-            <img src="https://images.unsplash.com/photo-1553577336-a19f84791e0f?w=800" alt="Cobblestone street leading to a cathedral in Budapest, Hungary">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-in-front-of-cathedral-FteB5JZ4POE" target="_blank">Joseph Sun</a></figcaption>
-        </figure>
-        <figure>
-            <img src="https://images.unsplash.com/photo-1620492090058-4ce64d1470d6?w=800" alt="Old style street in Edinburgh, UK">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/brown-and-white-concrete-building-oORewSaLPw8" target="_blank">Chloe Frost-Smith</a></figcaption>
-        </figure>
-        <figure>
-            <img src="https://images.unsplash.com/photo-1630316710923-60d1c6935503?w=800" alt="Rainbow street leading to a white church in Reykjavik, Iceland">
-            <figcaption>Photo by <a href="https://unsplash.com/photos/people-walking-on-street-near-white-concrete-building-during-daytime-4kzAJ-v6GXA" target="_blank">Héloïse Delbos</a></figcaption>
+            <img src="./img/enhanced__DSC0849.JPG" alt="Clock Tower in Bern, Switzerland">
+            <figcaption>Fotos by Raimon</figcaption>
         </figure>
     </main>
     <footer>
-        <p>The how behind: using pure CSS scroll-driven (parallax) and scroll-triggered (reveal) animations. You can see all my other demos using pure CSS scroll tricks
-            <a href="https://codepen.io/thebabydino/pens/tags/?selected_tag=css-scroll-animation" target="_blank">under this tag</a>.
-        </p>
-        <p><strong>One more thing.</strong> If you like the Maths and Physics infused CSS, canvas, and SVG work that I've been putting out for over a decade, you can support it by becoming a patron on
-            <a href="https://www.patreon.com/anatudor" target="_blank">Patreon</a> or with a one-time donation on
-            <a href="https://ko-fi.com/anatudor" target="_blank">Ko-fi</a>. Or at least share this to show the world what can be done on the web these days... because I think it's pretty damn cool!
-        </p>
+        <p>Estas imágenes capturan momentos especiales de mis viajes. Cada detalle está pensado para que disfrutes la experiencia visual mientras exploras el mundo a través de mis ojos.</p>
+        <p><strong>Y una cosa más.</strong> Si disfrutas de las fotos y el diseño de esta página, ¡no dudes en compartirla! Cada imagen captura un pedacito del mundo que he tenido la suerte de descubrir.</p>
     </footer>
+    
 
 
        <!-- Overlay for zoom -->
