@@ -34,9 +34,14 @@ main {
 }
 
 figure {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    aspect-ratio: 3 / 2;
+    width: 100%; /* Se ajusta al contenedor */
+    max-width: 300px; /* Puedes ajustar este tamaño según lo que prefieras */
+    aspect-ratio: 4 / 3; /* Mantiene una proporción uniforme para todas las figuras */
+    overflow: hidden; /* Esto asegura que las imágenes no se salgan del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     opacity: 0;
     transform: translateY(100px);
@@ -44,18 +49,20 @@ figure {
     cursor: pointer;
 }
 
+figure img {
+    width: 100%; /* La imagen se ajusta al ancho de la figura */
+    height: 100%; /* La imagen se ajusta a la altura de la figura */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción y se ajuste */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+
 figure.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease;
-}
 
 figure:hover img {
     transform: scale(1.05);
