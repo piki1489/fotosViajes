@@ -1,198 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galería Fotográfica de Mis Viajes</title>
+    <meta
+      name="description"
+      content="Galería fotográfica de viajes de Raimon: ciudades, paisajes y rincones capturados por el mundo."
+    />
+    <title>Viajes de Raimon</title>
+    <link
+      rel="preload"
+      as="image"
+      href="./img/optimized/alberobello-large.jpg"
+    />
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./fotos.js"></script>
   </head>
 
   <body>
-    <header>
-      <h1>Descubre el Mundo a Través de Mi Lente</h1>
-      <p>
-        Bienvenidos a una colección de momentos capturados durante mis viajes
-        por todo el mundo. Desde bulliciosas ciudades hasta paisajes serenos,
-        cada foto cuenta una historia de aventura, descubrimiento y asombro.
-        Desplázate hacia abajo y deja que la magia de viajar se despliegue ante
-        tus ojos.
-      </p>
+    <header class="hero">
+      <!-- <img
+        class="hero__image"
+        src="./img/optimized/alberobello-large.jpg"
+        alt="Casas blancas de Alberobello durante un viaje"
+        fetchpriority="high"
+      /> -->
+      <div class="hero__content">
+        <p class="eyebrow">Galería personal</p>
+        <h1>Viajes de Raimon</h1>
+        <p>
+          Ciudades, caminos, agua, piedra y esos detalles que hacen que un viaje
+          vuelva de golpe cuando aparece una foto.
+        </p>
+      </div>
     </header>
+
     <main>
-      <figure>
-        <img
-          src="./img/alberobello.jpg"
-          alt="White old style wooden buildings in Norway"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/arrozChina.jpg"
-          alt="Cobblestone street in Râșnov, Romania"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img src="./img/bled.jpg" alt="Stores in Stockholm, Sweden" />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/bruselas.jpg"
-          alt="Snow-covered street in Leiden, Netherlands"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/budapestIglesia.jpg"
-          alt="Street with shops in Perth, Australia"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/casaChina.jpg"
-          alt="Old town in Rothenburg ob der Tauber, Germany"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/casaDinamarca.jpg"
-          alt="Jewelry shop in Copenhagen, Denmark"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/cascadaEslovenia2.jpg"
-          alt="Narrow street in Málaga, Spain"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/castilloDinamarca.jpg"
-          alt="Busy street in Vienna, Austria"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/edimburgo.jpg"
-          alt="Astronomical Tower in Prague, Czechia"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/letrasChina.jpg"
-          alt="Narrow street in Catargena, Colombia"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img src="./img/lubliana.jpg" alt="Stairs in Marseille, France" />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/manSeaDinamarca.jpg"
-          alt="Street in Novara di Sicilia, Italy"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img src="./img/objetoChina.jpg" alt="Street in Chania, Greece" />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/parlamento.jpg"
-          alt="Clock Tower in Bern, Switzerland"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img src="./img/pula.jpg" alt="Narrow street in Catargena, Colombia" />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img src="./img/rioChina.jpg" alt="Stairs in Marseille, France" />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="./img/rioCina2.jpg"
-          alt="Street in Novara di Sicilia, Italy"
-        />
-        <figcaption>Fotos by Raimon</figcaption>
-      </figure>
+      <section class="gallery" aria-label="Fotografías de viajes"></section>
     </main>
 
     <footer>
+      <p>Fotos by Raimon</p>
       <p>
-        Estas imágenes capturan momentos especiales de mis viajes. Cada detalle
-        está pensado para que disfrutes la experiencia visual mientras exploras
-        el mundo a través de mis ojos.
-      </p>
-      <p>
-        <strong>Y una cosa más.</strong> Si disfrutas de las fotos y el diseño
-        de esta página, ¡no dudes en compartirla! Cada imagen captura un
-        pedacito del mundo que he tenido la suerte de descubrir.
+        Una pequeña vuelta al mundo, hecha para disfrutarla en cualquier
+        pantalla.
       </p>
     </footer>
 
-    <!-- Overlay for zoom -->
-    <div class="overlay" id="overlay">
-      <button class="close-btn" id="close-btn">&times;</button>
-      <img src="" alt="Zoomed Image" id="zoomed-img" />
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Visor de fotografía"
+    >
+      <button
+        class="lightbox__close"
+        type="button"
+        aria-label="Cerrar fotografía"
+      >
+        &times;
+      </button>
+      <button
+        class="lightbox__nav lightbox__nav--prev"
+        type="button"
+        aria-label="Fotografía anterior"
+      >
+        &#8249;
+      </button>
+      <img alt="" id="lightbox-img" />
+      <button
+        class="lightbox__nav lightbox__nav--next"
+        type="button"
+        aria-label="Fotografía siguiente"
+      >
+        &#8250;
+      </button>
+      <p class="lightbox__caption" id="lightbox-caption"></p>
     </div>
 
     <script>
-      // IntersectionObserver to trigger image appearance on scroll
-      const figures = document.querySelectorAll("figure");
-      const observer = new IntersectionObserver(
+      const fallbackPhotos = [
+        {
+          title: "Alberobello",
+          place: "Italia",
+          slug: "alberobello",
+          widths: [900, 1600],
+          alt: "Casas blancas tradicionales en Alberobello, Italia",
+        },
+        {
+          title: "Arrozales",
+          place: "China",
+          slug: "arroz-china",
+          alt: "Paisaje de arrozales durante un viaje por China",
+        },
+        {
+          title: "Bled",
+          place: "Eslovenia",
+          slug: "bled",
+          alt: "Vista de Bled en Eslovenia",
+        },
+        {
+          title: "Bruselas",
+          place: "Bélgica",
+          slug: "bruselas",
+          alt: "Escena urbana de Bruselas, Bélgica",
+        },
+        {
+          title: "Budapest",
+          place: "Hungría",
+          slug: "budapest-iglesia",
+          alt: "Iglesia y arquitectura de Budapest, Hungría",
+        },
+        {
+          title: "Casa tradicional",
+          place: "China",
+          slug: "casa-china",
+          alt: "Casa tradicional fotografiada en China",
+        },
+        {
+          title: "Costa nórdica",
+          place: "Dinamarca",
+          slug: "casa-dinamarca",
+          alt: "Casa junto a la costa en Dinamarca",
+        },
+        {
+          title: "Castillo",
+          place: "Dinamarca",
+          slug: "castillo-dinamarca",
+          alt: "Castillo fotografiado durante un viaje por Dinamarca",
+        },
+        {
+          title: "Edimburgo",
+          place: "Escocia",
+          slug: "edimburgo",
+          alt: "Vista de Edimburgo en Escocia",
+        },
+        {
+          title: "Letras y color",
+          place: "China",
+          slug: "letras-china",
+          alt: "Detalle con letras y color en China",
+        },
+        {
+          title: "Reflejos",
+          place: "China",
+          slug: "rio-cina2",
+          alt: "Vista de rio y reflejos durante un viaje por China",
+        },
+        {
+          title: "Liubliana",
+          place: "Eslovenia",
+          slug: "lubliana",
+          alt: "Rincón de Liubliana, Eslovenia",
+        },
+        {
+          title: "Frente al mar",
+          place: "Dinamarca",
+          slug: "man-sea-dinamarca",
+          alt: "Persona mirando al mar en Dinamarca",
+        },
+        {
+          title: "Detalle",
+          place: "China",
+          slug: "objeto-china",
+          alt: "Detalle decorativo fotografiado en China",
+        },
+        {
+          title: "Parlamento",
+          place: "Budapest",
+          slug: "parlamento",
+          alt: "Parlamento de Budapest junto al rio",
+        },
+        {
+          title: "Pula",
+          place: "Croacia",
+          slug: "pula",
+          alt: "Arquitectura y calle de Pula, Croacia",
+        },
+        {
+          title: "Rio",
+          place: "China",
+          slug: "rio-china",
+          alt: "Rio y paisaje urbano en China",
+        },
+        {
+          title: "Piedras erráticas",
+          place: "Estonia",
+          slug: "piedras-erraticas",
+          alt: "Vista al Mar Báltico con piedras erráticas",
+        },
+      ];
+
+      const photos = (window.galleryPhotos || fallbackPhotos).map((photo) => {
+        if (!Array.isArray(photo)) return photo;
+        const [file, title, place, alt, slug] = photo;
+
+        return {
+          file,
+          title,
+          place,
+          alt,
+          slug,
+        };
+      });
+
+      const gallery = document.querySelector(".gallery");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const closeButton = lightbox.querySelector(".lightbox__close");
+      const prevButton = lightbox.querySelector(".lightbox__nav--prev");
+      const nextButton = lightbox.querySelector(".lightbox__nav--next");
+      let currentIndex = 0;
+
+      gallery.innerHTML = photos
+        .map((photo, index) => {
+          const [smallWidth, largeWidth] = photo.widths || [900, 1800];
+          const loading = index === 0 ? "eager" : "lazy";
+          const small = `./img/optimized/${photo.slug}-small.jpg`;
+          const large = `./img/optimized/${photo.slug}-large.jpg`;
+          const original = `./img/${photo.file || `${photo.slug}.jpg`}`;
+
+          return `
+            <figure class="photo-card">
+              <button
+                type="button"
+                data-full="${large}"
+                data-original="${original}"
+                data-title="${photo.title}"
+                data-place="${photo.place}"
+              >
+                <img
+                  src="${small}"
+                  srcset="${small} ${smallWidth}w, ${large} ${largeWidth}w"
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                  alt="${photo.alt}"
+                  loading="${loading}"
+                  decoding="async"
+                  onerror="this.onerror=null; this.src='${original}'; this.removeAttribute('srcset'); this.closest('button').dataset.full='${original}';"
+                />
+                <figcaption><span>${photo.title}</span><small>${photo.place}</small></figcaption>
+              </button>
+            </figure>
+          `;
+        })
+        .join("");
+
+      const cards = [...document.querySelectorAll(".photo-card")];
+      const buttons = cards.map((card) => card.querySelector("button"));
+
+      const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target); // Stop observing once visible
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
             }
           });
         },
-        {
-          threshold: 0.1,
-        }
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
       );
 
-      figures.forEach((figure) => {
-        observer.observe(figure);
+      cards.forEach((card) => revealObserver.observe(card));
+
+      function showPhoto(index) {
+        currentIndex = (index + buttons.length) % buttons.length;
+        const button = buttons[currentIndex];
+        const title = button.dataset.title;
+        const place = button.dataset.place;
+
+        lightboxImg.src = button.dataset.full;
+        lightboxImg.alt = button.querySelector("img").alt;
+        lightboxCaption.textContent = `${title} · ${place}`;
+      }
+
+      function openLightbox(index) {
+        showPhoto(index);
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+        closeButton.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        buttons[currentIndex].focus();
+      }
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", () => openLightbox(index));
       });
 
-      // Zoom effect on click
-      const overlay = document.getElementById("overlay");
-      const zoomedImg = document.getElementById("zoomed-img");
-      const closeBtn = document.getElementById("close-btn");
+      closeButton.addEventListener("click", closeLightbox);
+      prevButton.addEventListener("click", () => showPhoto(currentIndex - 1));
+      nextButton.addEventListener("click", () => showPhoto(currentIndex + 1));
 
-      figures.forEach((figure) => {
-        figure.addEventListener("click", () => {
-          const imgSrc = figure.querySelector("img").src;
-          zoomedImg.src = imgSrc;
-          overlay.classList.add("show");
-        });
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
       });
 
-      closeBtn.addEventListener("click", () => {
-        overlay.classList.remove("show");
-      });
-
-      overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) {
-          overlay.classList.remove("show");
-        }
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("is-open")) return;
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
+        if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
       });
     </script>
   </body>
