@@ -56,7 +56,7 @@ function Save-ResizedJpeg {
 }
 
 $content = Get-Content -Raw -Path $photosFile
-$matches = [regex]::Matches($content, '\["([^"]+)",\s*"[^"]+",\s*"[^"]+",\s*"[^"]+",\s*"([^"]+)"\]')
+$matches = [regex]::Matches($content, '\[\s*"([^"]+)",\s*"[^"]+",\s*"[^"]+",\s*"[^"]+",\s*"([^"]+)"\s*,?\s*\]')
 $activeOptimizedFiles = New-Object System.Collections.Generic.HashSet[string]
 
 foreach ($match in $matches) {

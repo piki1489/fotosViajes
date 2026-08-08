@@ -23,9 +23,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(135deg, rgba(127, 212, 193, 0.12), transparent 32rem),
-    linear-gradient(180deg, #171512 0%, var(--bg) 36rem);
+  background: linear-gradient(180deg, #171512 0%, var(--bg) 24rem);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
@@ -41,38 +39,21 @@ button {
 }
 
 .hero {
-  min-height: min(84vh, 780px);
+  min-height: auto;
   position: relative;
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
-  padding: clamp(1.25rem, 4vw, 4rem);
+  padding: clamp(2rem, 7vw, 5rem) clamp(1rem, 4vw, 4rem) clamp(1.5rem, 4vw, 3rem);
   isolation: isolate;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(18, 17, 15, 0.05) 0%, rgba(18, 17, 15, 0.48) 48%, rgba(18, 17, 15, 0.96) 100%),
-    linear-gradient(90deg, rgba(18, 17, 15, 0.78) 0%, rgba(18, 17, 15, 0.18) 62%);
-}
-
-.hero__image {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.01);
+  content: none;
 }
 
 .hero__content {
   width: min(760px, 100%);
-  padding-bottom: clamp(1rem, 6vh, 4rem);
 }
 
 .eyebrow {
@@ -86,10 +67,10 @@ button {
 
 h1 {
   margin: 0;
-  max-width: 12ch;
+  max-width: 14ch;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 12vw, 8rem);
-  line-height: 0.92;
+  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  line-height: 0.95;
   letter-spacing: 0;
 }
 
@@ -103,7 +84,7 @@ h1 {
 main {
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: clamp(1rem, 4vw, 3rem);
+  padding: 0 clamp(1rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
 }
 
 .gallery {
@@ -283,22 +264,68 @@ footer p:first-child {
 }
 
 @media (max-width: 680px) {
+  body {
+    background: #12110f;
+  }
+
   .hero {
-    min-height: 76vh;
+    padding: 1.1rem 0.85rem 0.9rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.45rem;
+    font-size: 0.68rem;
+  }
+
+  h1 {
+    max-width: none;
+    font-size: clamp(2.25rem, 13vw, 3.4rem);
+    line-height: 0.95;
+  }
+
+  .hero p:not(.eyebrow) {
+    max-width: 34rem;
+    margin-top: 0.65rem;
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  main {
+    padding: 0 0.55rem 1.4rem;
   }
 
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
   }
 
   .photo-card {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1.18;
+  }
+
+  .photo-card button {
+    border-radius: 6px;
+    box-shadow: none;
   }
 
   .photo-card figcaption {
     align-items: start;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.12rem;
+    padding: 2.8rem 0.55rem 0.55rem;
+  }
+
+  .photo-card span {
+    font-size: 0.88rem;
+  }
+
+  .photo-card small {
+    font-size: 0.64rem;
+  }
+
+  footer {
+    padding: 0.5rem 1rem 2rem;
+    font-size: 0.85rem;
   }
 
   .lightbox {
@@ -309,7 +336,7 @@ footer p:first-child {
   .lightbox img {
     grid-column: 1 / -1;
     max-width: 100%;
-    max-height: 72vh;
+    max-height: 74vh;
   }
 
   .lightbox__nav--prev,
@@ -324,6 +351,16 @@ footer p:first-child {
 
   .lightbox__nav--next {
     grid-column: 2;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card {
+    aspect-ratio: 4 / 3;
   }
 }
 
